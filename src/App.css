@@ -1,11 +1,6 @@
 .App {
   text-align: center;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 .App-header {
   background-color: #282c34;
   min-height: 85vh;
@@ -23,60 +18,36 @@ button{
   border-radius: 15px;
   margin-bottom: 10px;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .newMinute {
   color: red;
-  animation: rainbow 3s linear 0s infinite;
+  animation: rainbow 0.5s linear 0s infinite;
   transform: scale(2);
   text-shadow: 0px 16px 16px rgba(177, 177, 177, 0.4);
 }
 
-.newMinute::after {
-  opacity: 1;
-  bottom: -50px;
-  text-shadow: none;
-  animation: shake 0.2s linear 0s infinite;
-}
-
 @keyframes rainbow {
   from {
-    color: #6666ff;
+    color: #0000ff;
+    transform: translate(1px, 1px) rotate(0deg);
   }
-  10% {
-    color: #0099ff;
+  20% {
+    color: #47b4ff;
+    transform: translate(-3px, 0px) rotate(30deg);
   }
   40% {
     color: #00ff00;
+    transform: translate(1px, -1px) rotate(-30deg);
   }
   60% {
     color: #ffd900;
+    transform: translate(-3px, 1px) rotate(30deg);
   }
   80% {
-    color: #ff3399;
+    color: #ff007e;
+    transform: translate(-1px, -1px) rotate(-30deg);
   }
   100% {
-    color: #8949ff;
+    color: #5800ff;
+    transform: translate(1px, -2px) rotate(0deg);
   }
-}
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(1deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(1deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

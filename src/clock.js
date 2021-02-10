@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import './App.css';
 
 
 export default class Clock extends React.Component {
@@ -32,7 +32,6 @@ export default class Clock extends React.Component {
                     this.setState({class: ''});
                     clearInterval(this.classInterval);
                 }, 3000);
-                // this.partyTime();
             }
 
             this.setState({time: hours + ':' + minutes + ':' + seconds});
@@ -61,7 +60,6 @@ export default class Clock extends React.Component {
                     <br/>
                     <h1 className={this.state.class}>{ this.state.time }</h1>
                 </div>
-                <div id="partyBlock">Party Block</div>
                 <button onClick={this.showClockHandler}>Show/Hide</button>
                 <button onClick={this.showTextHandler}>Skip this year</button>
                 <div id="textToShow" style={{display: this.state.isTextDisplayed ? "block":"none"}}>
